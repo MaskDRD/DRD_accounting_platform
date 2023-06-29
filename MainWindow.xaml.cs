@@ -1,4 +1,5 @@
-﻿using System;
+﻿using accounting_platform.view;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,36 @@ namespace accounting_platform
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            WorkerWindow workerWindow = new WorkerWindow();
+            workerWindow.Show();
+        }
+
+        private void ButtonPosition_Click(object sender, RoutedEventArgs e)
+        {
+            PositionWindow positionWindow = new PositionWindow();
+            positionWindow.Show();
+        }
+
+        private void ButtonAttendance_Click(object sender, RoutedEventArgs e)
+        {
+            AttendanceWindow attendanceWindow = new AttendanceWindow();
+            attendanceWindow.Show();
+        }
+
+        private void ButtonSalary_Click(object sender, RoutedEventArgs e)
+        {
+            SalaryWindow salaryWindow = new SalaryWindow();
+            salaryWindow.Show();
+        }
+
+        private void ButtonDr_Click(object sender, RoutedEventArgs e)
+        {
+            InfoWindow infoWindow = new InfoWindow();
+            infoWindow.Show();
         }
     }
 }
