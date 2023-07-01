@@ -11,7 +11,9 @@ namespace accounting_platform.view
     public partial class InfoWindow : Window
     {
         private readonly StatusAttendanceRepository statusAttendanceRepository = new StatusAttendanceRepository();
+        private readonly StatusWorkerRepository statusWorkerRepository = new StatusWorkerRepository();
         private DataTable statusAttendanceTableData = new DataTable();
+        private DataTable statusWorkerTableData = new DataTable();
         public InfoWindow()
         {
             InitializeComponent();
@@ -21,6 +23,9 @@ namespace accounting_platform.view
         {
             statusAttendanceTableData = statusAttendanceRepository.selectStatusAttendanceTable();
             statusAttendanceTable.ItemsSource = statusAttendanceTableData.DefaultView;
+
+            statusWorkerTableData = statusWorkerRepository.selectStatusWorker();
+            statusWorkerTable.ItemsSource = statusWorkerTableData.DefaultView;
         }
     }
 }

@@ -5,7 +5,7 @@ namespace accounting_platform.repository
 {
     class StatusWorkerRepository
     {
-        private DataTable selectStatusWorker()
+        public DataTable selectStatusWorker()
         {
             string sql = "SELECT * FROM status_worker";
             return ConnentMain.Instance.getDataTableSql(sql);
