@@ -6,5 +6,7 @@
         xmlns:local="clr-namespace:accounting_platform.view"
         mc:Ignorable="d"
         Title="Дополнительная информация" Height="450" Width="800">
-    <Grid Initialized="Grid_Initialized"/>
+    <Grid Initialized="Grid_Initialized">
+        <DataGrid x:Name="statusAttendanceTable" />
+    </Grid>
 </Window>

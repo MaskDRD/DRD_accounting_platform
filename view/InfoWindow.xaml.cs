@@ -1,5 +1,6 @@
-﻿using System;
-using System.Configuration;
+﻿using accounting_platform.repository;
+using System;
+using System.Data;
 using System.Windows;
 
 namespace accounting_platform.view
@@ -9,6 +10,8 @@ namespace accounting_platform.view
     /// </summary>
     public partial class InfoWindow : Window
     {
+        private readonly StatusAttendanceRepository statusAttendanceRepository = new StatusAttendanceRepository();
+        private DataTable statusAttendanceTableData = new DataTable();
         public InfoWindow()
         {
             InitializeComponent();
@@ -16,7 +19,8 @@ namespace accounting_platform.view
 
         private void Grid_Initialized(object sender, EventArgs e)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            statusAttendanceTableData = statusAttendanceRepository.selectStatusAttendance();
+            statusAttendanceTable.ItemsSource = statusAttendanceTableData.DefaultView;
         }
     }
 }
