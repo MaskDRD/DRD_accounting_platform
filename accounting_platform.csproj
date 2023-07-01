@@ -99,7 +99,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="model\StatusAttendanceModel.cs" />
     <Compile Include="repository\StatusAttendanceRepository.cs" />
+    <Compile Include="repository\StatusWorkerRepository.cs" />
+    <Compile Include="utl\ConnentMain.cs" />
+    <Compile Include="utl\SelectModel.cs" />
+    <Compile Include="utl\Singleton.cs" />
     <Compile Include="view\AttendanceWindow.xaml.cs">
       <DependentUpon>AttendanceWindow.xaml</DependentUpon>
     </Compile>

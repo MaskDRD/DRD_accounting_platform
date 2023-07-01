@@ -1,6 +1,4 @@
-﻿
-using accounting_platform.utl;
-using MySql.Data.MySqlClient;
+﻿using accounting_platform.utl;
 using System.Data;
 
 namespace accounting_platform.repository

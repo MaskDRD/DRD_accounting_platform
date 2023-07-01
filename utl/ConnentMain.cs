@@ -6,8 +6,8 @@ namespace accounting_platform.utl
 {
     sealed class ConnentMain: Singleton<ConnentMain>
     {
-        private static ConnentMain _instance;
-        private static MySqlConnection connection;
+        private ConnentMain _instance;
+        private MySqlConnection connection;
 
         public ConnentMain()
         {
