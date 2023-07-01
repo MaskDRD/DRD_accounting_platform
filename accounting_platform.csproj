@@ -133,14 +133,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="media\img\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="worker.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="worker.svg" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
