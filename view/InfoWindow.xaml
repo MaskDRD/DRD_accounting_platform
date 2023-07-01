@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Дополнительная информация" Height="450" Width="800">
     <Grid Initialized="Grid_Initialized">
-        <DataGrid x:Name="statusAttendanceTable" />
+        <DataGrid x:Name="statusAttendanceTable" IsReadOnly="True" Height="150" Width="800" Margin="0,150,0,134"/>
+        <DataGrid x:Name="statusWorkerTable" IsReadOnly="True" Height="150" Width="800" Margin="0,0,0,284"/>
     </Grid>
 </Window>

@@ -19,7 +19,7 @@ namespace accounting_platform.view
 
         private void Grid_Initialized(object sender, EventArgs e)
         {
-            statusAttendanceTableData = statusAttendanceRepository.selectStatusAttendance();
+            statusAttendanceTableData = statusAttendanceRepository.selectStatusAttendanceTable();
             statusAttendanceTable.ItemsSource = statusAttendanceTableData.DefaultView;
         }
     }
