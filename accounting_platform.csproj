@@ -102,6 +102,7 @@
     <Compile Include="model\StatusAttendanceModel.cs" />
     <Compile Include="repository\StatusAttendanceRepository.cs" />
     <Compile Include="repository\StatusWorkerRepository.cs" />
+    <Compile Include="repository\WorkerRepository.cs" />
     <Compile Include="utl\ConnentMain.cs" />
     <Compile Include="utl\SelectModel.cs" />
     <Compile Include="utl\Singleton.cs" />
