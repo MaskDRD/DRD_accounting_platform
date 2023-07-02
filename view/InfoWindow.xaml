@@ -36,9 +36,27 @@
             <Label Grid.Row="0" Content="Таблица: Статусы сотрудников" FontWeight="Bold" FontSize="14"/>
             <DataGrid AutoGenerateColumns="False" Grid.Row="1" x:Name="statusWorkerTable" IsReadOnly="True">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Id" Width="*" Binding="{Binding Path=id}"/>
-                    <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding Path=name}"/>
-                    <DataGridTextColumn Header="Описания" Width="*" Binding="{Binding Path=description}"/>
+                    <DataGridTextColumn Header="Id" Width="*" Binding="{Binding Path=id}">
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="ToolTip" Value="{Binding Path=id}" />
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding Path=name}">
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="ToolTip" Value="{Binding Path=name}" />
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Описания" Width="*" Binding="{Binding Path=description}">
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="ToolTip" Value="{Binding Path=description}" />
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
