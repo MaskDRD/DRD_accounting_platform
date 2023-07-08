@@ -13,7 +13,7 @@ namespace accounting_platform.view
         private readonly StatusAttendanceRepository statusAttendanceRepository = new StatusAttendanceRepository();
         private readonly StatusWorkerRepository statusWorkerRepository = new StatusWorkerRepository();
         private DataTable statusAttendanceTableData = new DataTable();
-        private DataTable statusWorkerTableData = new DataTable();
+        public DataTable statusWorkerTableData = new DataTable();
         public InfoWindow()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace accounting_platform.view
             statusAttendanceTable.ItemsSource = statusAttendanceTableData.DefaultView;
 
             statusWorkerTableData = statusWorkerRepository.selectStatusWorker();
-            statusWorkerTable.ItemsSource = statusWorkerTableData.DefaultView;
+            //statusWorkerTable.ItemsSource = statusWorkerTableData.DefaultView;
         }
     }
 }
