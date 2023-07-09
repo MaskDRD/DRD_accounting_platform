@@ -60,7 +60,7 @@
                 </DataGrid.Columns>
             </DataGrid>
             !-->
-            <custom:CustomTable  Title="Таблица: Статусы сотрудников" Grid.Row="1" dataTables="{Binding statusWorkerTableData}" />
+            <custom:CustomTable  Title="Таблица: Статусы сотрудников" Grid.Row="1" DataTables="{Binding statusWorkerTableData}" />
         </Grid>
     </Grid>
 </Window>

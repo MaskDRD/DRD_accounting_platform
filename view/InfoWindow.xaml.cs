@@ -16,6 +16,7 @@ namespace accounting_platform.view
         public DataTable statusWorkerTableData = new DataTable();
         public InfoWindow()
         {
+            statusWorkerTableData = statusWorkerRepository.selectStatusWorker();
             InitializeComponent();
         }
 
@@ -24,7 +25,7 @@ namespace accounting_platform.view
             statusAttendanceTableData = statusAttendanceRepository.selectStatusAttendanceTable();
             statusAttendanceTable.ItemsSource = statusAttendanceTableData.DefaultView;
 
-            statusWorkerTableData = statusWorkerRepository.selectStatusWorker();
+ 
             //statusWorkerTable.ItemsSource = statusWorkerTableData.DefaultView;
         }
     }
