@@ -36,6 +36,7 @@
                     <Button x:Name="ButtonSalary" Content="Зарплата" Click="ButtonSalary_Click"/>
                 </StackPanel>
                 <Button Width="317" x:Name="ButtonDr" Content="Дополнительная информация" Click="ButtonDr_Click"/>
+                <Button Width="400" x:Name="ButtonTest" Content="Текст скрин для изучения функционала" Click="ButtonTest_Click"/>
             </StackPanel>
         </ScrollViewer>
     </Grid>

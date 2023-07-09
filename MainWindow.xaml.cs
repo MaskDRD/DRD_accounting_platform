@@ -55,5 +55,11 @@ namespace accounting_platform
             InfoWindow infoWindow = new InfoWindow();
             infoWindow.Show();
         }
+
+        private void ButtonTest_Click(object sender, RoutedEventArgs e)
+        {
+            Test testWindow = new Test();
+            testWindow.Show();
+        }
     }
 }

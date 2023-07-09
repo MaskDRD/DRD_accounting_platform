@@ -14,9 +14,10 @@ namespace accounting_platform.view
         private readonly StatusWorkerRepository statusWorkerRepository = new StatusWorkerRepository();
         private DataTable statusAttendanceTableData = new DataTable();
         public DataTable statusWorkerTableData = new DataTable();
+        public string title = "Таблица: Статусы сотрудников";
         public InfoWindow()
         {
-            statusWorkerTableData = statusWorkerRepository.selectStatusWorker();
+            //statusWorkerTableData = statusWorkerRepository.selectStatusWorker();
             InitializeComponent();
         }
 

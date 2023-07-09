@@ -13,14 +13,16 @@ namespace accounting_platform.component
     public partial class CustomTable : UserControl
     {
         public static readonly DependencyProperty dataTablesProperty = DependencyProperty.Register("DataTables", typeof(DataTable), typeof(CustomTable));
- 
+        public static readonly DependencyProperty titleProperty = DependencyProperty.Register("Title", typeof(string), typeof(CustomTable));
+
         public string Title { get; set; }
  
 
 
         public CustomTable()
         {
-            customTable.ItemsSource = DataTables.DefaultView;
+            Console.WriteLine(this);
+            //customTable.ItemsSource = DataTables.DefaultView;
             InitializeComponent();
         }
 
