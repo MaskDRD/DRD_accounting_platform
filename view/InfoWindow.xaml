@@ -3,16 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounting_platform.view"
+        xmlns:custom="clr-namespace:accounting_platform.component"
         mc:Ignorable="d"
         Title="Дополнительная информация" Height="450" Width="800"
-        Name="this"
+       x:Name="root"
         >
     <Grid Initialized="Grid_Initialized" x:Name="MainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="30px"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" x:Name="gridAttendance">
             <Grid.RowDefinitions>
@@ -30,8 +31,8 @@
         </Grid>
         <GridSplitter x:Name="splitter1" Grid.Row="1" Height="3"
         HorizontalAlignment="Stretch" VerticalAlignment="Center" />
-        <Grid x:Name="gridWorker" Grid.Row="2">
-            <!-- <Grid.RowDefinitions>  
+        <!--  <Grid x:Name="gridWorker" Grid.Row="2">
+             <Grid.RowDefinitions>  
                 <RowDefinition Height="30px"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions> -->
@@ -61,10 +62,7 @@
                     </DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
-            !-->
-            <!-- <custom:CustomTable Title="{Binding title, ElementName=this}" Grid.Row="1"  />-->
-            <Label Content="41" Grid.Row="3"></Label>
-            <Label Content="{Binding title, ElementName = this}" Grid.Row="3" Background="#FFA94444"></Label>
-        </Grid>
+        </Grid> !-->
+        <custom:CustomTable Grid.Row="2" Title="123"  />
     </Grid>
 </Window>

@@ -17,7 +17,7 @@ namespace accounting_platform.view
         public string title = "Таблица: Статусы сотрудников";
         public InfoWindow()
         {
-            //statusWorkerTableData = statusWorkerRepository.selectStatusWorker();
+            statusWorkerTableData = statusWorkerRepository.selectStatusWorker();
             InitializeComponent();
         }
 
@@ -25,9 +25,6 @@ namespace accounting_platform.view
         {
             statusAttendanceTableData = statusAttendanceRepository.selectStatusAttendanceTable();
             statusAttendanceTable.ItemsSource = statusAttendanceTableData.DefaultView;
-
- 
-            //statusWorkerTable.ItemsSource = statusWorkerTableData.DefaultView;
         }
     }
 }

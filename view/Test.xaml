@@ -3,10 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:accounting_platform.view"
         mc:Ignorable="d"
-        Title="Test" Height="450" Width="800">
+        Title="Test" Height="450" Width="800"
+        x:Name="root"
+        >
     <Grid>
-        
-    </Grid>
+       <!-- <TextBlock 
+       Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}, Path=title}"
+      /> -->
+
+        <TextBlock 
+            Text="{Binding ElementName=root, Path=title }"
+        />
+        <Button x:Name="buttonNewTitle" Click="buttonNewTitle_Click" Width="100" Height="100">Новый заголовок</Button>
+   </Grid>
 </Window>
