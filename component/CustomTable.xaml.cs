@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.Data;
 using System.Windows;
 using System.Windows.Controls;
-
 
 namespace accounting_platform.component
 {
@@ -12,15 +10,33 @@ namespace accounting_platform.component
     /// </summary>
     public partial class CustomTable : UserControl
     {
-  
-        public string Title { get; set; }
- 
+        public static readonly DependencyProperty DataTableProperty = DependencyProperty.Register(
+                "DataTable",
+                typeof(DataTable),
+                typeof(CustomTable)
+        );
+
+        public static readonly DependencyProperty TitleProperty = DependencyProperty.Register(
+                "Title",
+                typeof(string),
+                typeof(CustomTable)
+        );
+
+        public DataTable DataTable
+        {
+            get { return (DataTable)GetValue(DataTableProperty); }
+            set { SetValue(DataTableProperty, value); }
+        }
+
+        public string Title {
+            get { return (string)GetValue(TitleProperty); }
+            set { SetValue(TitleProperty, value); }
+        }
+
 
 
         public CustomTable()
-        {
-            this.DataContext = this;
-            //customTable.ItemsSource = DataTables.DefaultView;
+        {  
             InitializeComponent();
         } 
     }

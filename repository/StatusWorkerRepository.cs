@@ -8,7 +8,11 @@ namespace accounting_platform.repository
         public DataTable selectStatusWorker()
         {
             string sql = "SELECT * FROM status_worker";
-            return ConnentMain.Instance.getDataTableSql(sql);
+            DataTable dataTable = ConnentMain.Instance.getDataTableSql(sql);
+            dataTable.Columns[0].ColumnName = "id";
+            dataTable.Columns[1].ColumnName = "Имя";
+            dataTable.Columns[2].ColumnName = "Описание";
+            return dataTable;
         }
     }
 }

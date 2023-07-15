@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:accounting_platform.view"
         xmlns:custom="clr-namespace:accounting_platform.component"
         mc:Ignorable="d"
         Title="Дополнительная информация" Height="450" Width="800"
@@ -15,54 +14,9 @@
             <RowDefinition Height="30px"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" x:Name="gridAttendance">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30px"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Label Grid.Row="0" Content="Таблица: Статусы посещаемости" FontWeight="Bold" FontSize="14"/>
-            <DataGrid AutoGenerateColumns="False" Grid.Row="1" x:Name="statusAttendanceTable" IsReadOnly="True">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Id" Width="*" Binding="{Binding Path=id}"/>
-                    <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding Path=name}"/>
-                    <DataGridTextColumn Header="Описания" Width="*" Binding="{Binding Path=description}"/>
-                </DataGrid.Columns>
-            </DataGrid>
-        </Grid>
+        <custom:CustomTable Grid.Row="0" x:Name="gridAttendance" DataTable="{Binding ElementName=root, Path=statusAttendanceTableData}" Title="Таблица: Статусы посещаемости " />
         <GridSplitter x:Name="splitter1" Grid.Row="1" Height="3"
         HorizontalAlignment="Stretch" VerticalAlignment="Center" />
-        <!--  <Grid x:Name="gridWorker" Grid.Row="2">
-             <Grid.RowDefinitions>  
-                <RowDefinition Height="30px"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-            </Grid.RowDefinitions> -->
-            <!-- Label Grid.Row="0" Content="Таблица: Статусы сотрудников" FontWeight="Bold" FontSize="14"/>-->
-            <!-- <DataGrid AutoGenerateColumns="False" x:Name="statusWorkerTable" IsReadOnly="True">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Id" Width="*" Binding="{Binding Path=id}">
-                        <DataGridTextColumn.CellStyle>
-                            <Style TargetType="DataGridCell">
-                                <Setter Property="ToolTip" Value="{Binding Path=id}" />
-                            </Style>
-                        </DataGridTextColumn.CellStyle>
-                    </DataGridTextColumn>
-                    <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding Path=name}">
-                        <DataGridTextColumn.CellStyle>
-                            <Style TargetType="DataGridCell">
-                                <Setter Property="ToolTip" Value="{Binding Path=name}" />
-                            </Style>
-                        </DataGridTextColumn.CellStyle>
-                    </DataGridTextColumn>
-                    <DataGridTextColumn Header="Описания" Width="*" Binding="{Binding Path=description}">
-                        <DataGridTextColumn.CellStyle>
-                            <Style TargetType="DataGridCell">
-                                <Setter Property="ToolTip" Value="{Binding Path=description}" />
-                            </Style>
-                        </DataGridTextColumn.CellStyle>
-                    </DataGridTextColumn>
-                </DataGrid.Columns>
-            </DataGrid>
-        </Grid> !-->
-        <custom:CustomTable Grid.Row="2" Title="123"  />
+        <custom:CustomTable Grid.Row="2" DataTable="{Binding ElementName=root, Path=statusWorkerTableData}" Title="Таблица: Статусы сотрудников" />
     </Grid>
 </Window>

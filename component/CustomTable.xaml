@@ -12,6 +12,6 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="{Binding Path=Title, ElementName=root}" FontWeight="Bold" FontSize="14"/>
-        <DataGrid x:Name="customTable" Grid.Row="1" IsReadOnly="True" AutoGenerateColumns="True"></DataGrid>
+        <DataGrid x:Name="customTable" Grid.Row="1" IsReadOnly="True" AutoGenerateColumns="True" ItemsSource="{ Binding Path=DataTable, ElementName=root }"></DataGrid>
     </Grid>
 </UserControl>

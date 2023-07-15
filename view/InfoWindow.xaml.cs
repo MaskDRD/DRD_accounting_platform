@@ -12,19 +12,18 @@ namespace accounting_platform.view
     {
         private readonly StatusAttendanceRepository statusAttendanceRepository = new StatusAttendanceRepository();
         private readonly StatusWorkerRepository statusWorkerRepository = new StatusWorkerRepository();
-        private DataTable statusAttendanceTableData = new DataTable();
-        public DataTable statusWorkerTableData = new DataTable();
+ 
+        public DataTable statusWorkerTableData { get; set; }
+        public DataTable statusAttendanceTableData { get; set; }
         public string title = "Таблица: Статусы сотрудников";
         public InfoWindow()
         {
+            statusAttendanceTableData = statusAttendanceRepository.selectStatusAttendanceTable();
             statusWorkerTableData = statusWorkerRepository.selectStatusWorker();
             InitializeComponent();
         }
 
         private void Grid_Initialized(object sender, EventArgs e)
-        {
-            statusAttendanceTableData = statusAttendanceRepository.selectStatusAttendanceTable();
-            statusAttendanceTable.ItemsSource = statusAttendanceTableData.DefaultView;
-        }
+        {  }
     }
 }
